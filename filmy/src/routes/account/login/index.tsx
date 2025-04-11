@@ -57,8 +57,11 @@ function RouteComponent() {
             className="text-center w-52 mt-10 border-black border-solid border rounded-md"
             onChange={handlePasswordChange}
           ></input>
-          <Link to="/" className="mt-10 underline text-[royalblue]">
+          <Link to="/" className="mt-6 underline text-[royalblue]">
             Forgot your password?
+          </Link>
+          <Link to="/" className="mt-6 underline text-[royalblue]">
+            I don't have an account
           </Link>
           <button
             className="mt-10 bg-[royalblue] px-10 py-2 rounded-md text-white"
