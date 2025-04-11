@@ -7,17 +7,22 @@ export const Route = createFileRoute("/account/")({
 
 function RouteComponent() {
   const [hasAccount, setHasAccount] = useState(false);
+  const [isLogged, setIsLogged] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const stored = localStorage.getItem("hasAccount");
-    setHasAccount(stored === "true");
+    const storedAccount = localStorage.getItem("hasAccount");
+    const storedLogged = localStorage.getItem("isLogged");
+    setHasAccount(storedAccount === "true");
+    setIsLogged(storedLogged === "true");
   }, []);
 
-  if (hasAccount) {
+  if (hasAccount && !isLogged) {
     navigate({ to: "/account/login" });
-  } else {
+  } else if (!hasAccount) {
     navigate({ to: "/account/register" });
+  } else if (hasAccount && isLogged) {
+    navigate({ to: "/account" });
   }
-  return <></>;
+  return <>{localStorage.getItem("UserName")}</>;
 }

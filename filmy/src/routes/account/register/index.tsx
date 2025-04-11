@@ -17,7 +17,6 @@ function RouteComponent() {
     setHasAccount(stored === "true");
   }, []);
 
-
   function handleUserNameChange(event) {
     setUserName(event.target.value);
   }
@@ -40,12 +39,15 @@ function RouteComponent() {
   }
   return (
     <>
-      <div className="container mx-auto flex justify-center">
+      <div className="container mx-auto flex flex-col items-center">
+        <h2 className="text-center text-4xl uppercase font-bold mt-10">
+          Register
+        </h2>
         <div className="flex flex-col items-center w-96 h-96 border border-solid border-[black] rounded-xl mt-10">
           <input
             type="text"
             placeholder="User Name"
-            className="text-center w-52 mt-10"
+            className="text-center w-52 mt-10 border-black border-solid border rounded-md"
             onChange={handleUserNameChange}
             value={userName}
             required
@@ -53,13 +55,13 @@ function RouteComponent() {
           <input
             type="password"
             placeholder="Password"
-            className="text-center w-52 mt-10"
+            className="text-center w-52 mt-10 border-black border-solid border rounded-md"
             onChange={handlePasswordChange}
             value={password}
             required
           ></input>
           <button
-            className="mt-10 bg-[royalblue] px-6 py-2 rounded-md"
+            className="mt-10 bg-[royalblue] px-10 py-2 rounded-md text-white"
             onClick={createAccount}
           >
             Register
