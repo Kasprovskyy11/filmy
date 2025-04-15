@@ -43,7 +43,7 @@ function RouteComponent() {
         <h2 className="text-center text-4xl uppercase font-bold mt-10">
           Register
         </h2>
-        <div className="flex flex-col items-center w-96 h-96 border border-solid border-[black] rounded-xl mt-10">
+        <div className="flex flex-col items-center w-96 h-96 border border-solid border-[black] rounded-xl mt-10 bg-[white]">
           <input
             type="text"
             placeholder="User Name"

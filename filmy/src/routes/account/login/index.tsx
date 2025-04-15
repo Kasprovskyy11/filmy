@@ -44,7 +44,7 @@ function RouteComponent() {
         <h2 className="text-center text-4xl uppercase font-bold mt-10">
           Login
         </h2>
-        <div className="flex flex-col items-center w-96 h-96 border border-solid border-[black] rounded-xl mt-10">
+        <div className="flex flex-col items-center w-96 h-96 border border-solid border-[black] rounded-xl mt-10 bg-[#FFFFF0]">
           <input
             type="text"
             placeholder="User Name"
@@ -60,7 +60,10 @@ function RouteComponent() {
           <Link to="/" className="mt-6 underline text-[royalblue]">
             Forgot your password?
           </Link>
-          <Link to="/" className="mt-6 underline text-[royalblue]">
+          <Link
+            to="/account/register"
+            className="mt-6 underline text-[royalblue]"
+          >
             I don't have an account
           </Link>
           <button
