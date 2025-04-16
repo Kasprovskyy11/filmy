@@ -39,11 +39,17 @@ function RouteComponent() {
 
   return (
     <>
-      <h2>Films Library</h2>
       <div>
-        {data.map((film) => (
-          <FilmCard key={film.imdbID} title={film.Title} />
-        ))}
+        <h2>Films Library</h2>
+        <div className="container mx-auto grid grid-cols-3 grid-flow-row max-w-screen-lg">
+          {data.map((film) => (
+            <FilmCard
+              key={film.imdbID}
+              title={film.Title}
+              posterId={film.Poster}
+            />
+          ))}
+        </div>
       </div>
     </>
   );
